@@ -1,9 +1,11 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 require('babel-register');
 
 const config = {
   mode: 'development',
-  entry: ['./src/index.js', './src/sass/main.sass'],
+  entry: ['./src/index.js', './src/assets/sass/app.sass'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +26,7 @@ const config = {
             loader: 'file-loader',
             options: {
               name: '[name].css',
-              outputPath: 'assets/css/',
+              outputPath: '/',
             },
           },
           'extract-loader',
@@ -38,7 +40,23 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.png$/,
+        use: ['file-loader'],
+      },
     ],
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: './public',
+      },
+    ]),
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    inline: true,
+    port: 8080,
   },
 };
 
