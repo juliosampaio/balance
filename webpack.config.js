@@ -49,7 +49,7 @@ const config = {
   plugins: [
     new CopyWebpackPlugin([
       {
-        from: './public',
+        from: 'public/',
       },
     ]),
   ],
