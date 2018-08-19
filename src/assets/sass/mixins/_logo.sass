@@ -1,0 +1,10 @@
+@mixin largeLogo
+    @include sprite(135px, 30px, -234px, -10px)
+
+@mixin smallLogo
+    @include sprite(28px, 25px, -284px, -60px)
+
+@mixin responsiveLogo
+    @include largeLogo
+    @include breakpoint(small only)
+        @include smallLogo
