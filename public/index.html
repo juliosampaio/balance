@@ -6,38 +6,39 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saldo Web</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <link rel="stylesheet" href="./app.css">
 </head>
 
 <body>
-  <div class="grid-container fluid">
-    <div class="grid-x grid-margin-x">
-      <div class="cell">
-        <header>
-          <div class="logo"></div>
-          <h1>saldo <span class="balance hide-for-small-only">R$ 100.000.000,00</span></h1>
-        </header>
-      </div>
+  <div class="grid-y grid-frame grid-padding-x">
+    <div class="cell">
+      <header>
+        <div class="logo"></div>
+        <h1>saldo <span class="balance hide-for-small-only">R$ 100.000.000,00</span></h1>
+      </header>
     </div>
-    <div class="grid-x grid-margin-x">
-      <div class="cell">
-        <main>
-          <article id="balance-carousel" class="carousel">
-            <div class="slides">
-              <section id="left" class="slide previous">A</section>
-              <section id="center" class="slide active">
-                <ul class="list">
-                  <li>Sua compra aparece aqui</li>
-                </ul>
-              </section>
-              <section id="right" class="slide next">C</section>
-            </div>
-            <div class="controls">
-            </div>
-          </article>
-        </main>
-      </div>
+    <div class="cell auto">
+      <main>
+        <div class="info">
+          <div class="year">2017</div>
+          <div class="separator"></div>
+          <div class="greeting">Bem-vindo</div>
+        </div>
+        <article id="balance-carousel" class="carousel">
+          <div class="slides">
+            <section id="left" class="slide previous">A</section>
+            <section id="center" class="slide active">
+              <ul class="list">
+                <li>Sua compra aparece aqui</li>
+              </ul>
+            </section>
+            <section id="right" class="slide next">C</section>
+          </div>
+          <div class="controls">
+          </div>
+        </article>
+      </main>
     </div>
   </div>
   <script src="./bundle.js"></script>

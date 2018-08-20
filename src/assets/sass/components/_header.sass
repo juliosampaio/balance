@@ -10,7 +10,7 @@ header
 
     h1
         color: white
-        font-size: 2rem
+        font-size: 1.5rem
         position: absolute
         left: 50%
         top: 50%
@@ -19,3 +19,22 @@ header
         overflow: hidden
         text-overflow: ellipsis
         font-weight: bolder
+
+.info
+  margin-top: 35px
+  @include breakpoint(small only)
+    margin-top: 10px
+  margin-bottom: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  color: white
+  font-weight: bold
+  .separator
+    margin-top: 5px
+    margin-bottom: 15px
+    width: 350px
+    border: 0
+    height: 1px
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(136, 255, 9, 1), rgba(0, 0, 0, 0))
