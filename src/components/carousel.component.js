@@ -1,6 +1,9 @@
-export class Carousel {
+export class CarouselComponent {
   constructor(id) {
     this.wrapper = document.getElementById(id);
+    if (!this.wrapper) {
+      throw `Failed to instantiate CarouselComponent. Could not find element with id ${id}.`;
+    }
     this.init();
   }
 

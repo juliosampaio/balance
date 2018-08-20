@@ -1,5 +1,7 @@
-import { Carousel } from './components/carousel';
+import { CarouselComponent } from './components/carousel.component';
+import { BankStatementComponent } from './components/bank-statement.component';
 
 window.onload = () => {
-  const c = new Carousel('balance-carousel');
+  const c = new CarouselComponent('balance-carousel');
+  const b = new BankStatementComponent('bank-statement');
 };
