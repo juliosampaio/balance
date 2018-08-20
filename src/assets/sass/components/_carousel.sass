@@ -18,7 +18,7 @@ main
     .slide
       display: flex
       border-radius: 10px
-      background: $slides-background
+      background: center no-repeat $slides-background-img $slides-background-color
       width: 505px
       height: 512px
       overflow-y: scroll
@@ -43,6 +43,7 @@ main
       &.active
         z-index: 10
         left: 50%
+        background: $slides-background-color
       &.next
         z-index: 5
         left: 94%
