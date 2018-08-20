@@ -1,0 +1,46 @@
+ul.list
+  margin: 0
+  padding: 0
+  list-style: none
+  width: 100%
+  height: 100%
+  li
+    display: flex
+    padding: 5px
+    height: 70px
+    @include breakpoint(small only)
+      height: 100px
+    color: white
+    border-top: 1px solid #00BAEB
+    .details
+      display: flex
+      flex: 1 1 auto
+      overflow: hidden
+      @include breakpoint(small only)
+        flex-direction: column
+      .category
+        display: flex
+        align-items: center
+        width: 68px
+        padding-left: 20px
+        font-weight: bold
+        @include breakpoint(small only)
+          padding-left: 0
+          margin-bottom: 10px
+      .title
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+      .value
+        font-weight: bold
+        &.positive
+          color: #89FF07
+    .actions
+      display: flex
+      align-items: center
+      width: 68px
+      padding-right: 15px
+      @include breakpoint(small only)
+        padding-bottom: 25px
+      flex: 0 0 auto
+      justify-content: flex-end
